@@ -44,6 +44,7 @@ React와 TypeScript만을 이용하여 옛한글 입력기를 구현합니다. �
 
 
 **예시**
+
 ![Untitled (1)](https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/ef4663f3-ab67-46cf-b861-64411848d488)
 
 힌트는 현재 입력 상태에 따른 유한상태머신을 구현하는 것입니다. 현재 작성 중인 한글의 상태(초성, 중성, 종성 등)을 인지하고 그에 따라 들어오는 입력을 분기처리할 수 있습니다.
