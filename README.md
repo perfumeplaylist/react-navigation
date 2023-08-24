@@ -28,7 +28,10 @@ UI는 자유롭게 구현해도 상관없습니다. 단, 기본적으로 페이�
 
 ⚠️ 참고로 router 등을 이용하여 URL이 변경되는 진짜 페이지 이동 구현은 아닙니다. 단순히 컴포넌트 내에서 로직으로서 동작되는 UI 입니다.
 
-<img width="50%" src="https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/eaa3a6f6-2dbb-4f2e-a619-c4e2d162bf93"/>
+https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/36ac2fb4-b372-409c-8ea4-3ca9c13c9e61
+
+https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/3350f047-6ebb-44f7-866d-e56093ff894c
+
 
 ### 옛한글 입력기
 
@@ -37,6 +40,10 @@ React와 TypeScript만을 이용하여 옛한글 입력기를 구현합니다. �
 **고려 사항**
 - [ ] 현대 한글 자음과 모음으로 옛한글 자음과 모음을 입력하는 완전한 방법을 고안해야 합니다. 예를 들어, "ㅂㅇ"을 입력하면 'ㅸ'으로 인식하는 규칙을 만들어야 합니다.
 - [ ] 옛한글을 화면에 표시해야 한다. 예를 들어, 다음과 같이 화면에 표시할 수 있어야 합니다.
+![Untitled](https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/9812ea83-50f8-42b2-8745-6299a22a2abf)
+
+**예시**
+![Untitled (1)](https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/ef4663f3-ab67-46cf-b861-64411848d488)
 
 힌트는 현재 입력 상태에 따른 유한상태머신을 구현하는 것입니다. 현재 작성 중인 한글의 상태(초성, 중성, 종성 등)을 인지하고 그에 따라 들어오는 입력을 분기처리할 수 있습니다.
 
