@@ -42,6 +42,7 @@ React와 TypeScript만을 이용하여 옛한글 입력기를 구현합니다. �
 - [ ] 옛한글을 화면에 표시해야 한다. 예를 들어, 다음과 같이 화면에 표시할 수 있어야 합니다.
 ![Untitled](https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/9812ea83-50f8-42b2-8745-6299a22a2abf)
 
+
 **예시**
 ![Untitled (1)](https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/ef4663f3-ab67-46cf-b861-64411848d488)
 
