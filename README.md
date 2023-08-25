@@ -28,9 +28,9 @@ UI는 자유롭게 구현해도 상관없습니다. 단, 기본적으로 페이�
 
 ⚠️ 참고로 router 등을 이용하여 URL이 변경되는 진짜 페이지 이동 구현은 아닙니다. 단순히 컴포넌트 내에서 로직으로서 동작되는 UI 입니다.
 
-https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/36ac2fb4-b372-409c-8ea4-3ca9c13c9e61
+<img width="50%" src="https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/fade1115-6ac7-4cfc-a0e0-a4595352422f"/>
 
-https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/3350f047-6ebb-44f7-866d-e56093ff894c
+<img width="50%" src="https://github.com/prgrms-fe-devcourse/FEDC4-13_React/assets/44829481/16498c1a-57ce-4780-9e9e-199a5c221302"/>
 
 
 ### 옛한글 입력기
