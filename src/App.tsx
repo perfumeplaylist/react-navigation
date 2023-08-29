@@ -4,7 +4,9 @@ import Link from "@/components/Link/Link";
 import Navigation from '@/components/Navigation';
 import { useSessionStorage } from './components/hooks/useSessionStorage';
 import { Router } from './interface/props';
-import { v4 } from 'uuid';
+import { v4 } from "uuid"
+
+const initalState:Router[]=[{id:v4(),title:"Home"}]
 
 export default function App() {
   const [router,setState]=useSessionStorage({key:"router",initalState})
@@ -14,10 +16,10 @@ export default function App() {
     setState((prev:Router[])=>[...prev,{title,id:v4()}])
   }
 
-  // const handleRouterGo=(tempId:string)=>{
-  //   const idx=router.findIndex(({id:string})=>id===tempId);
-  //   setState((prev:Router[])=>[...prev.slice(0,idx)])
-  // }
+  const handleRouterGo=(tempId:string)=>{
+    const idx=router.findIndex((item:Router)=>item.id===tempId);
+    setState((prev:Router[])=>[...prev.slice(0,idx)])
+  }
 
   const handleRouterBack=()=>{
     setState((prev:Router[])=>[...prev.slice(0,prev.length-1)])
@@ -26,6 +28,7 @@ export default function App() {
   return (
     <>
       <Header backgroundColor="gray">
+            <div>
             {router.length > 1 && 
             (
               <Link onClick={handleRouterBack}>
@@ -38,12 +41,22 @@ export default function App() {
               </Link>
             )
             }
-          <Text block={true} size="1.5rem" color="white">Home</Text>
+            </div>
+          <Text block={true} size="1.5rem" color="white">
+            Home
+          </Text>
+            <ul style={{overflowY:"scroll"}}>
+            {router.length >1 && 
+              router.map(({id,title}:Router)=>
+              <li key={id}>
+                <Link onClick={()=>handleRouterGo(id)} color="black"  >{title}</Link>
+              </li>
+              )
+            }
+            </ul>
       </Header>
       <Navigation router={router[router.length-1]} handleRouterPushState={(title:string)=>handleRouterPushState(title)}/>
     </> 
   );
 }
 
-
-const initalState=[{id:v4(),title:"home"}]

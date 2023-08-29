@@ -8,6 +8,7 @@ export interface PropsType{
     mode?:string,
     color?:string,
     block?:boolean,
+    // handleRouterMove?:(newValue:Router[])=>void
 }
 
 export interface Router{
