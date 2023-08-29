@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import Header from "@/components/Header/Header";
 
 export default function App() {
-  const [state,setStaet]=useState(0);
   return (
-    <div>
-      
-    </div>
+    <>
+      <Header backgroundColor="gray">
+
+      </Header>
+    </>
   );
 }
 
