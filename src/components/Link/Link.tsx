@@ -1,13 +1,9 @@
-import React from 'react';
+import { PropsType } from '@/interface/props';
+import classes from "@/components/Link/Link.module.css";
 
-export default function Link({children,color,size,style,onLinkClick}) {
-    const linkStyle={
-        ...style,
-        color,
-        size
-    }
+export default function Link({children,onClick}:PropsType) {
     return (
-        <a style={...linkStyle} onClick={onLinkClick}>
+        <a className={classes.linkContainer} onClick={()=>onClick()}>
             {children}
         </a>
     );

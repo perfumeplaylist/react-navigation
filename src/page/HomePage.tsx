@@ -1,12 +1,13 @@
-import Header from '@/components/Header';
-import Main from "@/components/Main";
+import Link from '@/components/Link/Link';
+import Text from "@/components/Text/Text";
 
-export default function HomePage() {
+export default function HomePage({handleRouterPushState}) {
     return (
-        <>
-            <Header />
-            <Main />
-        </>
+        <section>
+            <Link onClick={()=>handleRouterPushState('home')}>Go To Home</Link>
+            <Link onClick={()=>handleRouterPushState("Detail")}>Go To Detail</Link>
+            <Text block={true} size="4rem" color="black">Home</Text>
+        </section>
     );
 }
 

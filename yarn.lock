@@ -6052,6 +6052,7 @@ __metadata:
     react-dom: ^18.2.0
     storybook: ^7.3.2
     typescript: ^5.0.2
+    uuid: ^9.0.0
     vite: ^4.4.5
   languageName: unknown
   linkType: soft

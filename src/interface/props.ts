@@ -8,9 +8,16 @@ export interface PropsType{
     mode?:string,
     color?:string,
     block?:boolean,
-    onClick?:(newValue:Router[])=>void
 }
 
 export interface Router{
+    id:string,
     title:string
 }
+
+export interface SessionProps{
+    key:string,
+    initalState:Router[]
+}
+
+export type newRouter=Router[] | ((prev:Router[])=>Router[]);
