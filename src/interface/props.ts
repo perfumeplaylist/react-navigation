@@ -2,11 +2,12 @@ import { ReactNode } from 'react';
 
 export interface PropsType{
     children:ReactNode,
-    size?:number,
     weight?:number,
+    size?:string,
     backgroundColor?:string,
     mode?:string,
     color?:string,
+    block?:boolean,
     onClick?:(newValue:Router[])=>void
 }
 

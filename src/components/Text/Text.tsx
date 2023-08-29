@@ -1,13 +1,13 @@
-import React from 'react';
+import { PropsType } from '@/interface/props';
 
-export default function Text({children,block,size,style}) {
+export default function Text({children,block=true,size,color}:PropsType) {
     const Tag=block ?  "div" : "p"; 
     const textStyle={
-        ...style,
-        size
+        color,
+        fontSize:size,
     }
     return (
-        <Tag style={...textStyle}>
+        <Tag style={{...textStyle}}>
             {children}
         </Tag>
     );
