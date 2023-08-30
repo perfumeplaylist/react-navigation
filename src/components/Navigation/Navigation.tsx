@@ -2,7 +2,7 @@ import { useRef,useEffect, useContext } from 'react';
 import { RouterContext } from '@/components/hooks/useRouterContext';
 import { viewPage } from '@/util/viewPage';
 import HomePage from '@/page/HomePage';
-import classes from "@/components/Navigation.module.css"
+import classes from "@/components/Navigation/Navigation.module.css"
 
 export default function Navigation() {
     const mainRef=useRef(null);

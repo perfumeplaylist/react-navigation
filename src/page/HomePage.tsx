@@ -1,7 +1,7 @@
+import { useContext } from 'react';
+import { RouterContext } from '@/components/hooks/useRouterContext';
 import Link from '@/components/Link/Link';
 import Text from "@/components/Text/Text";
-import { RouterContext } from '@/components/hooks/useRouterContext';
-import { useContext } from 'react';
 
 export default function HomePage() {
     const {handleRouter}=useContext(RouterContext);

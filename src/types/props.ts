@@ -2,12 +2,14 @@ import { ReactNode } from 'react';
 
 export interface PropsType{
     children?:ReactNode,
+    width?:string,
     weight?:number,
     size?:string,
     backgroundColor?:string,
     mode?:string,
     color?:string,
     block?:boolean,
+    className?:string,
     onClick?:()=>void
 }
 
