@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SessionProps,newRouter } from '../../interface/props';
+import { SessionProps,newRouter } from '@/interface/props';
 
 
 

@@ -1,23 +1,30 @@
+import { useRef, useEffect, useContext } from 'react';
 import { PropsType } from '@/interface/props';
+import { RouterContext } from '@/components/hooks/useRouterContext';
+import Link from '@/components/Link/Link';
+import List from "@/components/List/List";
+import Text from '@/components/Text/Text';
 import classes from '@/components/Header/Header.module.css';
-import { useRef, useEffect } from 'react';
-import { delay } from '@/util/delay';
 
-export default function Header({children,mode='horization',backgroundColor="black"}:PropsType) {
+export default function Header({mode='horization',backgroundColor="black"}:PropsType) {
     const headerRef=useRef(null);
+    
+    const {router,handleRouter}=useContext(RouterContext);
 
     useEffect(()=>{
         if(headerRef.current){
-            headerRef.current.classList.add(`${classes.active}`);
+            (headerRef.current as HTMLElement).classList.add(`${classes.active}`);
         }
-      delay(800).then(()=>{
-        if(headerRef.current){
-            headerRef.current.classList.remove(`${classes.active}`);
-        }
-      })
+        const clearSetTimoutId=setTimeout(()=>{
+            if(headerRef.current){
+                (headerRef.current as HTMLElement).classList.remove(`${classes.active}`);
+            }
+        },700)
       return ()=>{
+        clearTimeout(clearSetTimoutId)
       }
-    },[children]);
+    
+    },[router]);
 
     const HeaderStyle={
         display: mode==='horization' ? "flex" : undefined,
@@ -26,7 +33,23 @@ export default function Header({children,mode='horization',backgroundColor="blac
 
     return (
         <header style={{...HeaderStyle}} className={classes.header} ref={headerRef}>
-            {children}
+              {router.length > 1 && 
+              (
+                <Link onClick={()=>handleRouter({type:'back'})}>
+                    <>
+                      <span className="material-symbols-outlined">
+                        arrow_back_ios
+                      </span>
+                      <Text block={true} size="1.5rem" color="white">{router[router.length-1].title}
+                      </Text>
+                    </>
+                </Link>
+              )
+              }
+            <Text block={true} size="1.5rem" color="white">
+                {router[router.length-1].title}
+            </Text>
+           {router.length > 1 && <List />}
         </header>
     );
 }

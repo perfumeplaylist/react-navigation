@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface PropsType{
-    children:ReactNode,
+    children?:ReactNode,
     weight?:number,
     size?:string,
     backgroundColor?:string,
@@ -19,6 +19,11 @@ export interface Router{
 export interface SessionProps{
     key:string,
     initalState:Router[]
+}
+
+export interface handleRouterProps{
+    type:string,
+     action?:{type:string,title?:string,tempId?:string}
 }
 
 export type newRouter=Router[] | ((prev:Router[])=>Router[]);

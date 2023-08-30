@@ -7,8 +7,16 @@
 }
 
 
-
 @keyframes fade-in{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out{
     from{
         opacity: 0;
     }
@@ -19,5 +27,9 @@
 
 .header.active{
     animation: fade-in .7s;
+}
+
+.header:not(.active){
+    animation: fade-out .7s;
 }
 
