@@ -9,10 +9,10 @@ import { v4 } from "uuid"
 const initalState:Router[]=[{id:v4(),title:"Home"}]
 
 export default function App() {
-  const [router,setState]=useSessionStorage({key:"router",initalState})
+  const [router,setState]=useSessionStorage({key:"router",initalState});
+
 
   const handleRouterPushState=(title:string)=>{
-    
     setState((prev:Router[])=>[...prev,{title,id:v4()}])
   }
 
@@ -29,21 +29,22 @@ export default function App() {
     <>
       <Header backgroundColor="gray">
             <div>
-            {router.length > 1 && 
-            (
-              <Link onClick={handleRouterBack}>
-                  <>
-                  <span className="material-symbols-outlined">
-                    arrow_back_ios
-                  </span>
-                  <Text block={true} size="1.5rem" color="white">{router[router.length-1].title}</Text>
-                  </>
-              </Link>
-            )
-            }
+              {router.length > 1 && 
+              (
+                <Link onClick={handleRouterBack}>
+                    <>
+                      <span className="material-symbols-outlined">
+                        arrow_back_ios
+                      </span>
+                      <Text block={true} size="1.5rem" color="white">{router[router.length-1].title}
+                      </Text>
+                    </>
+                </Link>
+              )
+              }
             </div>
           <Text block={true} size="1.5rem" color="white">
-            Home
+            {router[router.length-1].title}
           </Text>
             <ul style={{overflowY:"scroll"}}>
             {router.length >1 && 

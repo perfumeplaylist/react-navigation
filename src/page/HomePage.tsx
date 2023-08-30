@@ -1,7 +1,7 @@
 import Link from '@/components/Link/Link';
 import Text from "@/components/Text/Text";
 
-export default function HomePage({handleRouterPushState}) {
+export default function HomePage({handleRouterPushState}:{handleRouterPushState:(vule:string)=>void}) {
     return (
         <section>
             <Link onClick={()=>handleRouterPushState('home')}>Go To Home</Link>
